@@ -76,8 +76,8 @@
           localScriptName = getScriptName(localScriptSrc);
 
           displayMsg(localScriptName + " >> " + localScriptSrc);
-
-          if(scriptName == localScriptName) { 
+		  if(scriptScr == localScriptSrc) {
+          //if(scriptName == localScriptName) { 
             notAvailableFlag = false;
             displayMsg('script already loaded: ' + scriptName);
             break; 
@@ -112,10 +112,11 @@
         }
 
         function localError() {
+		  i++;
           displayMsg(scriptSrc + ' : fail');
 
           if(i < length) {
-            i++;
+            //i++;
             loadScript();
           } else {
             executeCallback(onError);
@@ -156,6 +157,7 @@
                 resetScriptHandlers(scriptElem);
                 onSuccess();
               } else {
+				scriptElem.parentNode.removeChild(scriptElem);
                 resetScriptHandlers(scriptElem);
                 onError();
               }
@@ -166,6 +168,7 @@
               onSuccess();
             };
             scriptElem.onerror = function() {
+			  scriptElem.parentNode.removeChild(scriptElem);
               resetScriptHandlers(scriptElem);
               onError();
             };

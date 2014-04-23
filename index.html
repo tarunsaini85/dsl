@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="dsl.js"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+$DSL.DEBUG = true;
+/*var filesArray = [
+	[
+		'file:///C:/Users/tarunjeet.saini/Desktop1/naukri_framework_v1.3.js',
+		'file:///C:/Users/tarunjeet.saini/Desktop2/naukri_framework_v1.3.js'
+	],
+	[
+		'file:///C:/Users/tarunjeet.saini/Desktop1/jquery-1.10.2.js',
+		'file:///C:/Users/tarunjeet.saini/Desktop/jquery-1.10.2.js'
+	]
+];
+function dslLoop(arr){
+	window.dslFlag = {};
+	for(var x=0;x<arr.length;x++){
+		$DSL.load(
+			arr[x],
+			function(){console.log("Loaded")},
+			function(){console.warn("Failed");window.dslFlag[x]=true}
+		);
+	}
+}
+dslLoop(filesArray);*/
+
+$DSL.load(
+	[
+		'file:///C:/Users/tarunjeet.saini/Desktop1/naukri_framework_v1.3.js',
+		'file:///C:/Users/tarunjeet.saini/Desktop2/naukri_framework_v1.3.js',
+		'file:///C:/Users/tarunjeet.saini/Desktop3/naukri_framework_v1.3.js',
+		'file:///C:/Users/tarunjeet.saini/Desktop4/naukri_framework_v1.3.js',
+		'file:///C:/Users/tarunjeet.saini/Desktop5/naukri_framework_v1.3.js',
+		'file:///C:/Users/tarunjeet.saini/Desktop/naukri_framework_v1.3.js'
+	],
+	function(){console.log("Loaded")},
+	function(){console.warn("Failed")}
+);
+</script>
+</body>
+</html>

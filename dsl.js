@@ -114,7 +114,6 @@
         function localError() {
 		  i++;
           displayMsg(scriptSrc + ' : fail');
-
           if(i < length) {
             //i++;
             loadScript();
